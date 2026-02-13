@@ -118,6 +118,8 @@ export default function BookmarkManager({ userId }: BookmarkManagerProps) {
 
   return (
     <div>
+      <h1 className="text-3xl font-bold text-gray-900 mb-8">Smart Bookmark Manager</h1>
+      
       <form onSubmit={handleSubmit} className="mb-8 bg-white p-6 rounded-lg shadow">
         <div className="mb-4">
           <label htmlFor="title" className="block text-sm font-medium text-gray-700 mb-2">
