@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
 import BookmarkManager from '@/components/BookmarkManager'
+import SignOutButton from '@/components/SignOutButton'
 
 export default function Home() {
   const [userId, setUserId] = useState<string | null>(null)
@@ -40,14 +41,7 @@ export default function Home() {
       <div className="max-w-4xl mx-auto">
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-3xl font-bold text-gray-900">My Bookmarks</h1>
-          <form action="/auth/signout" method="post">
-            <button
-              type="submit"
-              className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors"
-            >
-              Sign Out
-            </button>
-          </form>
+          <SignOutButton />
         </div>
         <BookmarkManager userId={userId} />
       </div>
